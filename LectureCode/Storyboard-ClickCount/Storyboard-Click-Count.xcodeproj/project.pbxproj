@@ -12,6 +12,7 @@
 		4D051A791E4D5D6B0040D636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D051A771E4D5D6B0040D636 /* Main.storyboard */; };
 		4D051A7B1E4D5D6B0040D636 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D051A7A1E4D5D6B0040D636 /* Assets.xcassets */; };
 		4D051A7E1E4D5D6B0040D636 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D051A7C1E4D5D6B0040D636 /* LaunchScreen.storyboard */; };
+		4DA0701A1F609D11001DCB6F /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA070191F609D11001DCB6F /* Counter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4D051A7A1E4D5D6B0040D636 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D051A7D1E4D5D6B0040D636 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D051A7F1E4D5D6B0040D636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DA070191F609D11001DCB6F /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				4D051A7A1E4D5D6B0040D636 /* Assets.xcassets */,
 				4D051A7C1E4D5D6B0040D636 /* LaunchScreen.storyboard */,
 				4D051A7F1E4D5D6B0040D636 /* Info.plist */,
+				4DA070191F609D11001DCB6F /* Counter.swift */,
 			);
 			path = "Storyboard-Click-Count";
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			files = (
 				4D051A761E4D5D6B0040D636 /* ViewController.swift in Sources */,
 				4D051A741E4D5D6B0040D636 /* AppDelegate.swift in Sources */,
+				4DA0701A1F609D11001DCB6F /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +301,7 @@
 				4D051A841E4D5D6B0040D636 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

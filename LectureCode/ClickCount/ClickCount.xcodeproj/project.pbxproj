@@ -57,12 +57,12 @@
 			isa = PBXGroup;
 			children = (
 				4D7E1A711E4549FC00E65C48 /* ViewController.swift */,
+				4DA070171F5FBEB6001DCB6F /* Counter.swift */,
 				4D7E1A6F1E4549FC00E65C48 /* AppDelegate.swift */,
 				4D7E1A731E4549FC00E65C48 /* Main.storyboard */,
 				4D7E1A761E4549FC00E65C48 /* Assets.xcassets */,
 				4D7E1A781E4549FC00E65C48 /* LaunchScreen.storyboard */,
 				4D7E1A7B1E4549FC00E65C48 /* Info.plist */,
-				4DA070171F5FBEB6001DCB6F /* Counter.swift */,
 			);
 			path = ClickCount;
 			sourceTree = "<group>";

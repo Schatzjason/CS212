@@ -10,13 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    private var count = 0
-
-    @IBOutlet var label: UILabel?
+    private var counter: Counter!
+    @IBOutlet var label: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        counter = Counter(initialValue: 0)
+    }
     
     @IBAction func increment() {
-        count += 1
-        label!.text = "\(count)"
+        counter.increment()
+        label!.text = "\(counter.value)"
     }
 }
 
