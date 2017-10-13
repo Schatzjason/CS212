@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2IT-wD-Jdz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="sqO-in-Fju">
+            <objects>
+                <navigationController id="2IT-wD-Jdz" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0HG-9C-NEJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="71X-r1-0VI" kind="relationship" relationship="rootViewController" id="dn6-MC-5OK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vGw-g1-mOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-382" y="109"/>
+        </scene>
+        <!--Red-->
+        <scene sceneID="qyV-eh-4JP">
+            <objects>
+                <viewController id="71X-r1-0VI" customClass="RedViewController" customModule="SimpleNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rs1-5J-XGo"/>
+                        <viewControllerLayoutGuide type="bottom" id="O7u-dD-oFi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uq5-ef-F5R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8z0-MR-uzL">
+                                <rect key="frame" x="32" y="105" width="130" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Code">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigateToBlue" destination="71X-r1-0VI" eventType="touchDown" id="v6U-Il-Ymf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzo-NZ-CeQ">
+                                <rect key="frame" x="45" y="192" width="212" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Manual-Segue">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="navigateToBlueUsingManualSegue" destination="71X-r1-0VI" eventType="touchDown" id="nag-L2-yx1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhy-xo-n7K">
+                                <rect key="frame" x="32" y="287" width="212" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Action-Segue">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="NKz-H2-w60" kind="show" identifier="ActionSegue" id="Alg-mW-MfW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Red" id="cQQ-Yc-2NL"/>
+                    <connections>
+                        <segue destination="NKz-H2-w60" kind="show" identifier="ManualSegue1" id="WLK-nS-jd3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jod-OX-TGc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="482.39999999999998" y="108.39580209895054"/>
+        </scene>
+        <!--Blue-->
+        <scene sceneID="aDj-55-qLd">
+            <objects>
+                <viewController storyboardIdentifier="Blue" title="Blue" id="NKz-H2-w60" customClass="BlueViewController" customModule="SimpleNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iwq-bF-DTD"/>
+                        <viewControllerLayoutGuide type="bottom" id="BsD-qf-41j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QBq-Kj-Sc9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0z-li-eRZ">
+                                <rect key="frame" x="28" y="323" width="320" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="P0z-li-eRZ" firstAttribute="centerY" secondItem="QBq-Kj-Sc9" secondAttribute="centerY" id="8ND-rX-t9y"/>
+                            <constraint firstItem="P0z-li-eRZ" firstAttribute="centerX" secondItem="QBq-Kj-Sc9" secondAttribute="centerX" id="xap-zd-Inw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="theLabel" destination="P0z-li-eRZ" id="FtT-ki-Tpl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQD-Tg-fSj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244" y="100.29985007496252"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Alg-mW-MfW"/>
+    </inferredMetricsTieBreakers>
+</document>

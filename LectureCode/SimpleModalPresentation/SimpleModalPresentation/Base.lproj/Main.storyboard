@@ -35,6 +35,9 @@
                             <constraint firstItem="8sD-Si-Bhq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wTI-K1-1fu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rockButton" destination="8sD-Si-Bhq" id="8FN-WG-n1k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,8 +61,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyK-eT-EjU">
-                                <rect key="frame" x="164.5" y="199" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyK-eT-EjU">
+                                <rect key="frame" x="161" y="204" width="52" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="dismissMe" destination="IdU-Ac-1WF" eventType="touchDown" id="s6i-YT-Fgc"/>
@@ -80,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VhS-Cm-Kt2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440.80000000000001" y="165.96701649175412"/>
+            <point key="canvasLocation" x="440.80000000000001" y="165.06746626686657"/>
         </scene>
     </scenes>
 </document>

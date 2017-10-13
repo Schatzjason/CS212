@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet var rockButton: UIButton!
+    
     private var count: Int = 0
  
     override func viewDidLoad() {
@@ -26,7 +28,8 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
-    @IBAction func presentOrangeViewController() {
+    @IBAction func presentOrangeViewController(sender: UIButton) {
+        
         // Get an "Orange" view controller from Storyboard
         let ovc = self.storyboard!.instantiateViewController(withIdentifier: "Orange") as! OrangeViewController
         
