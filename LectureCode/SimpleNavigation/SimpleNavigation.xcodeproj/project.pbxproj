@@ -14,6 +14,7 @@
 		4D59A9131F9059310078A2FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D59A9111F9059310078A2FD /* LaunchScreen.storyboard */; };
 		4D59A91B1F905D260078A2FD /* RedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59A91A1F905D260078A2FD /* RedViewController.swift */; };
 		4D59A91D1F9069140078A2FD /* BlueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59A91C1F9069140078A2FD /* BlueViewController.swift */; };
+		4D59A91F1F90725E0078A2FD /* Instructions.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4D59A91E1F90725E0078A2FD /* Instructions.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4D59A9141F9059310078A2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D59A91A1F905D260078A2FD /* RedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedViewController.swift; sourceTree = "<group>"; };
 		4D59A91C1F9069140078A2FD /* BlueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueViewController.swift; sourceTree = "<group>"; };
+		4D59A91E1F90725E0078A2FD /* Instructions.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Instructions.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		4D59A9071F9059300078A2FD /* SimpleNavigation */ = {
 			isa = PBXGroup;
 			children = (
+				4D59A91E1F90725E0078A2FD /* Instructions.rtf */,
 				4D59A91A1F905D260078A2FD /* RedViewController.swift */,
 				4D59A91C1F9069140078A2FD /* BlueViewController.swift */,
 				4D59A9081F9059300078A2FD /* AppDelegate.swift */,
@@ -132,6 +135,7 @@
 				4D59A9131F9059310078A2FD /* LaunchScreen.storyboard in Resources */,
 				4D59A9101F9059310078A2FD /* Assets.xcassets in Resources */,
 				4D59A90E1F9059310078A2FD /* Main.storyboard in Resources */,
+				4D59A91F1F90725E0078A2FD /* Instructions.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@ class RedViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func navigateToBlue() {
+    @IBAction func navigateToBlueUsingAllCode() {
         
         let vc = storyboard!.instantiateViewController(withIdentifier: "Blue")
         let blue = vc as! BlueViewController
