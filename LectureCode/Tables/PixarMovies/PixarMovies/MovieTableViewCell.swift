@@ -13,4 +13,5 @@ class MovieTableViewCell: UITableViewCell {
     @IBOutlet var poster: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var directorName: UILabel!
 }

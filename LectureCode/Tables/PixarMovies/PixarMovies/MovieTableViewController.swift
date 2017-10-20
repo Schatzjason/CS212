@@ -15,37 +15,44 @@ class MovieTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 1. Set the title
+        // Set the title
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0 // How many sections?
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0; // How many rows?
+        
+        return movies.count; // How many rows?
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieTableViewCell
         
-        cell.titleLabel.text = "" // title?
+        // Get the movie for this row
+        let theMovie = movies[indexPath.row]
+        
+        cell.titleLabel.text = theMovie.title
+        cell.poster.image = UIImage(named: theMovie.posterName)
+        cell.dateLabel.text = "\(theMovie.year)"
 
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // What should happen on a click?
+        self.performSegue(withIdentifier: "ShowMovieDetail", sender: self)
     }
 
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let controller = segue.destination as! MovieDetailViewController
+        
         let row = tableView.indexPathForSelectedRow!.row
+        let theMovie = self.movies[row]
+        
         
         // How shoulc we prepare?
+        controller.movie = theMovie
     }
 }
