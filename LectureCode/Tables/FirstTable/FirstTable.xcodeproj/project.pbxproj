@@ -12,6 +12,7 @@
 		4D59A9321F998B590078A2FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D59A9301F998B590078A2FD /* Main.storyboard */; };
 		4D59A9341F998B590078A2FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D59A9331F998B590078A2FD /* Assets.xcassets */; };
 		4D59A9371F998B590078A2FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D59A9351F998B590078A2FD /* LaunchScreen.storyboard */; };
+		4D59A93F1F9992740078A2FD /* Instructions.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4D59A93E1F9992740078A2FD /* Instructions.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4D59A9331F998B590078A2FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D59A9361F998B590078A2FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D59A9381F998B590078A2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D59A93E1F9992740078A2FD /* Instructions.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Instructions.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				4D59A9331F998B590078A2FD /* Assets.xcassets */,
 				4D59A9351F998B590078A2FD /* LaunchScreen.storyboard */,
 				4D59A9381F998B590078A2FD /* Info.plist */,
+				4D59A93E1F9992740078A2FD /* Instructions.rtf */,
 			);
 			path = FirstTable;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 				4D59A9371F998B590078A2FD /* LaunchScreen.storyboard in Resources */,
 				4D59A9341F998B590078A2FD /* Assets.xcassets in Resources */,
 				4D59A9321F998B590078A2FD /* Main.storyboard in Resources */,
+				4D59A93F1F9992740078A2FD /* Instructions.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
