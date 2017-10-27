@@ -5,7 +5,6 @@ import UIKit
 class GalaxyViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
-    
     @IBOutlet var button: UIButton!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
@@ -24,49 +23,33 @@ class GalaxyViewController: UIViewController {
     // downloading, and not downloading
     @IBAction func downloadOrCancel() {
         
-        if isDownloading {
-            cancelTheDownload()
-        } else {
+        if !isDownloading {
             startTheDownload()
+        } else {
+            cancelTheDownload()
         }
     }
     
     // Here's where we will start the downloading magic
     
     func startTheDownload() {
+
+        // Switch into downloading state
+        print("about to start working")
         isDownloading = true
         toggleViews(isDownloading: true)
-        
-        // Make the url
-        let url = URL(string: GalaxyURLs.nextURLString)!
 
-        // Create the download task
-        let task = URLSession.shared.dataTask(with: url) {
-            data, response, error in
-            
-            var galaxyImage: UIImage?
-            
-            if let error = error {
-                print(error)
-                galaxyImage = nil
-            }
-            
-            if let data = data {
-                galaxyImage = UIImage(data: data)
-            }
-            
-            // Pass these lines back to the main thread
-            DispatchQueue.main.async {
-                self.imageView.image = galaxyImage
-                self.isDownloading = false
-                self.toggleViews(isDownloading: false)
-            }
-        }
+        /* Some pretend work for our app
+
+        // for right now, we'll do some busy work in place of downloading
+        busyWork(300000)
         
-        // Start the task
-        task.resume()
-        
-        print("leaving startTheDownload")
+        // When we are done, switch the state back\
+        print("done working")
+        isDownloading = false
+        toggleViews(isDownloading: false)
+ 
+        */
     }
     
     func cancelTheDownload() {

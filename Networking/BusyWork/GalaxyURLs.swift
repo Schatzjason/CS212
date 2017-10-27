@@ -19,7 +19,7 @@ struct GalaxyURLs {
         "https://cdn.spacetelescope.org/archives/images/wallpaper5/potw1538a.jpg",
         "https://cdn.spacetelescope.org/archives/images/screen/heic0604a.jpg",
         "https://cdn.spacetelescope.org/archives/images/screen/potw1442a.jpg",
-        "https://cdn.spacetelescope.orgggg/archives/images/screen/opo9925a.jpg",
+        "https://cdn.spacetelescope.org/archives/images/screen/opo9925a.jpg",
         "https://cdn.spacetelescope.org/archives/images/screen/potw1119a.jpg",
         "https://cdn.spacetelescope.org/archives/images/screen/potw1108a.jpg",
         "https://cdn.spacetelescope.org/archives/images/screen/opo9919i.jpg"
