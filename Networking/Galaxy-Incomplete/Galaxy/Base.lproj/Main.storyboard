@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Galaxy View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GalaxyViewController" customModule="Galaxy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="657-hx-oCE">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Z5B-bx-mcO"/>
+                                    <constraint firstAttribute="width" constant="70" id="mPx-UT-eFB"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="downloadOrCancel" destination="BYZ-38-t0r" eventType="touchDown" id="0yd-W7-tPJ"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="OW3-7F-bIj"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8uE-Wa-Jcs"/>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="657-hx-oCE" secondAttribute="bottom" constant="20" id="1he-f2-Bal"/>
+                            <constraint firstItem="OW3-7F-bIj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6QW-5h-03Q"/>
+                            <constraint firstItem="657-hx-oCE" firstAttribute="top" secondItem="8uE-Wa-Jcs" secondAttribute="bottom" constant="16" id="9Hq-ik-rlZ"/>
+                            <constraint firstItem="8uE-Wa-Jcs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CV2-XD-Gm1"/>
+                            <constraint firstItem="657-hx-oCE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LQR-Ws-5Dx"/>
+                            <constraint firstItem="8uE-Wa-Jcs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rsc-DM-AYG"/>
+                            <constraint firstAttribute="trailing" secondItem="8uE-Wa-Jcs" secondAttribute="trailing" id="sGX-Ip-iqw"/>
+                            <constraint firstItem="OW3-7F-bIj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xUM-ro-JE6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="OW3-7F-bIj" id="hZh-3l-WMb"/>
+                        <outlet property="button" destination="657-hx-oCE" id="U4O-j8-zho"/>
+                        <outlet property="imageView" destination="8uE-Wa-Jcs" id="9Oa-q4-7ce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
