@@ -20,7 +20,9 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         
         setUIToDownloading(true)
         
-        let url = TMDBURLs.popular()
+        let url = TMDBURLs.URLForResource(TMDB.Resources.MovieTopRated)
+        print(url)
+        
         let task = URLSession.shared.dataTask(with: url) {
             data, response, error in
 
@@ -69,7 +71,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
         
         // Get the movie associated with this row out of the array
-        var movie = movies[indexPath.row]
+        let movie = movies[indexPath.row]
         
         // Set the movie title
         cell.textLabel!.text = movie.title
@@ -94,13 +96,18 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
                     print(error)
                 }
 
-                if let data = data, let image = UIImage(data: data) {
-                    movie.posterImage = image
-                    DispatchQueue.main.async {
-                        cell.imageView!.image = image
-                    }
+                if data == nil {
+                    return
                 }
-            }) 
+                
+                let image = UIImage(data: data!)!
+                 
+                movie.posterImage = image
+                    
+                DispatchQueue.main.async {
+                 cell.imageView!.image = image
+                }
+            })
             
             // resume task
             task.resume()
@@ -128,13 +135,6 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
             assertionFailure("Failed to parse data. data.length: \(data.count)")
             return [Movie]()
         }
-        
-        // Pretty Print the string, for debugging
-        // 
-        // let prettyData = try! JSONSerialization.data(withJSONObject: JSONObject, options: .prettyPrinted)
-        // let prettyString = String(data: prettyData, encoding: String.Encoding.utf8)
-        // print(prettyString ?? "No String Available")
-        
         
         // These are the dictionaries that we want to make into movies
         let movieDictionaries = dictionary[TMDB.Keys.Results] as! [[String : AnyObject]]

@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Movie {
+class Movie {
     
     struct Keys {
         static let Title = "title"

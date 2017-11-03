@@ -17,6 +17,10 @@ struct TMDBURLs {
         return URLForResource(TMDB.Resources.MoviePopular)
     }
     
+    static func nowPlaying() -> URL {
+        return URLForResource(TMDB.Resources.MovieTheatres)
+    }
+    
         
     static func URLForResource(_ r: String, parameters p: [String : AnyObject] = [:]) -> URL {
         return URLForResource(r, withId: nil, parameters: p)
@@ -38,7 +42,7 @@ struct TMDBURLs {
         // If this is a resource that requires an id, we will take care of that here
         if let id = id {
             // rewrite the resource with the {id} replaced with the id
-            resource = resource.replacingOccurrences(of: IDPlaceholder, with: "\(id)")
+            resource = resource.replacingOccurrences(of: "{id}", with: "\(id)")
         }
         
         // turn the remaining parameters into a string

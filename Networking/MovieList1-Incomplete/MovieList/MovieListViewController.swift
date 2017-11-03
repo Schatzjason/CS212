@@ -24,6 +24,13 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         
         // Create the task using URLSession.shared.dataTask  (Completion Handler?)
         
+        
+            // error handler
+            
+            // get the array of movies
+            
+            // on the main thread...  self.table.reloadData()
+        
         // Resume the task
     }
     
@@ -53,7 +60,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
         
         // Get the movie associated with this row out of the array
-        var movie = movies[indexPath.row]
+        let movie = movies[indexPath.row]
         
         // Set the movie title
         cell.textLabel!.text = movie.title
@@ -68,7 +75,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
             cell.imageView!.image = UIImage(named: "placeHolder")
         
             // get url, 
-
+            
             // create task
             
             // resume task
@@ -88,35 +95,19 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         }
         
         // Parse the Data into a JSON Object
-        let JSONObject = try! JSONSerialization.jsonObject(with: data)
         
         // Insist that this object must be a dictionary
-        guard let dictionary = JSONObject as? [String : Any] else {
-            assertionFailure("Failed to parse data. data.length: \(data.count)")
-            return [Movie]()
-        }
-        
-        // Pretty Print the string, for debugging
-        // 
-        // let prettyData = try! JSONSerialization.data(withJSONObject: JSONObject, options: .prettyPrinted)
-        // let prettyString = String(data: prettyData, encoding: String.Encoding.utf8)
-        // print(prettyString ?? "No String Available")
         
         
-        // These are the dictionaries that we want to make into movies
-        let movieDictionaries = dictionary[TMDB.Keys.Results] as! [[String : AnyObject]]
+        // Get the dictionaries that we want to make into movies
         
         // This is where we will put the movies. We will return this array.
-        var movies = [Movie]()
         
         // For each dictionary...
-        for d in movieDictionaries {
-            
+        
             // Make a movie...
-            let m = Movie(dictionary: d)!
-            
+        
             // Put it into the array that we will return
-            movies.append(m)
         }
         
         return movies
